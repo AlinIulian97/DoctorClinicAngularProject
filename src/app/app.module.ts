@@ -1,16 +1,29 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { DoctorComponent } from './components/doctor/doctor.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { Routes, RouterModule } from '@angular/router';
+
+const routes: Routes = [
+  { path: 'doctors', component: DoctorComponent },
+  { path: '', redirectTo: '/doctors', pathMatch: 'full' },
+  { path: '**', redirectTo: '/doctors', pathMatch: 'full' }
+]
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DoctorComponent
   ],
   imports: [
+    RouterModule.forRoot(routes),
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

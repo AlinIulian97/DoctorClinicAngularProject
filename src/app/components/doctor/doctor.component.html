@@ -1,0 +1,32 @@
+<div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th></th>
+                <th class="doctor-colour">First Name</th>
+                <th>last Name</th>
+                <th>Experience</th>
+                <th>Description</th>
+                <th>University</th>
+                <th>Cabinet</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let doctor of doctors">
+                <td>
+                    <img src="{{doctor.imgUrl}}" class="img-responsive"  width="100px">
+                </td>
+
+                <td>{{doctor.firstName}}</td>
+                <td>{{doctor.lastName}}</td>
+                <td>{{doctor.experience}}</td>
+                <td>{{doctor.description}}</td>
+                <td>{{doctor.university}}</td>
+                <td>{{doctor.cabinetName}}</td>
+            </tr>
+        </tbody>
+
+    </table>
+  
+</div>
