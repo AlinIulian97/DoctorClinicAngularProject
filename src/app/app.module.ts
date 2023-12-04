@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { DoctorComponent } from './components/doctor/doctor.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
+import { UserComponent } from './components/user/user.component';
 
 const routes: Routes = [
   { path: 'doctors', component: DoctorComponent },
@@ -16,7 +17,8 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    DoctorComponent
+    DoctorComponent,
+    UserComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
